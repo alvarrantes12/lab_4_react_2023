@@ -32,7 +32,7 @@ function Edit({ setRefresh }) {
                         className="form-control"
                         type="text"
                         value={idEdit}
-                        placeholder="ID de la película"
+                        placeholder="ID del producto"
                         onChange={(e) => { setIdEdit(e.target.value) }} />
                 </div>
                 <div className="form-group">
