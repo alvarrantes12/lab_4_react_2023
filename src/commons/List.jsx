@@ -1,6 +1,9 @@
 import React from 'react';
 
 const List = ({ contents }) => {
+
+  if(!contents || contents.lenght === 0) return <p>No hay Datos</p>
+
   return (
     <div style={{marginTop: '10px'}}>
       <h4 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px', color: '#E7CBCB'}}>Datos Disponibles</h4>
@@ -13,7 +16,7 @@ const List = ({ contents }) => {
           </tr>
         </thead>
         <tbody>
-          {contents.map(({ id, name, price}) => (
+          {contents.map(({ id, name, price }) => (
             <tr key={id}>
               <td style={{padding: '4px', borderBottom: '1px solid #E7CBCB'}}>{id}</td>
               <td style={{padding: '4px', borderBottom: '1px solid #E7CBCB'}}>{name}</td>
