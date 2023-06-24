@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-}
 
 .home,
 .reports,
@@ -16,3 +10,38 @@
   justify-content: center;
   font-size: 3rem;
 }
+
+body {
+  background-image: url('../public/Supermercado.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.dark-form {
+  background-color: #333; /* Change the background color to a preferred dark tone */
+  color: #fff; /* Change the text color to a preferred light color */
+}
+
+.dark-style {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff; /* Change the message text color to a preferred light color */
+}
+
+.button {
+  font-size: 16px; /* Adjust the font size */
+  padding: 10px 20px;
+}
+
+.TextInput {
+  font-size: 16px; /* Adjust the font size */
+  padding: 10px 20px;
+}
+
