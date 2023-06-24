@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Index from '../components/Products/index';
+import './Home.css';
 
 function Home() {
-  return (
-    <div className='home'>
-      <h1>Home</h1>
-    </div>
-  );
+    const [refresh, setRefresh] = useState(true)
+
+    return(
+        <div>
+            <Index refresh={refresh} setRefresh={setRefresh}/>
+        </div>
+    );
+
 }
+
+
 
 export default Home;
