@@ -9,7 +9,7 @@ function New({ setRefresh }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(name)
+
     try {
       postFetch("products", {
         name: name,

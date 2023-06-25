@@ -4,15 +4,18 @@ import { putFetch } from '../../commons/ApiMethods';
 function Edit({ setRefresh }) {
   const [nameEdit, setNameEdit] = useState('');
   const [idEdit, setIdEdit] = useState('');
+  const[priceEdit, setPriceEdit] = useState('');
   const [messageEdit, setMessageEdit] = useState('');
 
   const handleEdit = async (event) => {
     event.preventDefault();
     try {
-      putFetch(`products/${idEdit}`, { name: nameEdit })
+      putFetch(`products/${idEdit}`, { name: nameEdit, price: priceEdit})
         .then(() => {
           setNameEdit('');
+          setPriceEdit('');
           setIdEdit('');
+
           setMessageEdit("Editado correctamente");
           setRefresh(true);
         });
@@ -43,6 +46,16 @@ function Edit({ setRefresh }) {
             placeholder="Nuevo nombre de Producto"
             onChange={(e) => {
               setNameEdit(e.target.value);
+            }}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            value={priceEdit}
+            placeholder="Nuevo precio de Producto"
+            onChange={(e) => {
+              setPriceEdit(e.target.value);
             }}
           />
         </div>
