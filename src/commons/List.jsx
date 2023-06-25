@@ -9,15 +9,17 @@ const List = ({ contents }) => {
         <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
             <table>
                 <tr>
-                    <th style={{ padding: "1em", backgroundColor: "lightgray" }}>Nombre del Producto</th>
-                    <th style={{ padding: "1em", backgroundColor: "lightgray" }}>Precio</th>
+                    <th style={{ padding: "1em", backgroundColor: "#6E0092", fontWeight: "bold", color: "white" }}>ID</th>
+                    <th style={{ padding: "1em", backgroundColor: "#6E0092", fontWeight: "bold", color: "white"  }}>Nombre del Producto</th>
+                    <th style={{ padding: "1em", backgroundColor: "#6E0092", fontWeight: "bold", color: "white"  }}>Precio</th>
                 </tr>
 
                 <tbody>
                     {contents.map(({ id, product_name, product_price }) => (
                         <tr>
-                            <td style={{ padding: "1em", backgroundColor: "#E8E8E8", textAlign: "center", fontWeight: "bold" }} >{product_name}</td>
-                            <td style={{ padding: "1em", backgroundColor: "#E8E8E8", textAlign: "center", fontWeight: "bold" }} >{product_price}</td>
+                            <td style={{ padding: "1em", backgroundColor: "#F6C9FF", textAlign: "center"}} >{id}</td>
+                            <td style={{ padding: "1em", backgroundColor: "#F6C9FF", textAlign: "center"}} >{product_name}</td>
+                            <td style={{ padding: "1em", backgroundColor: "#F6C9FF", textAlign: "center"}} >{product_price}</td>
                         </tr>
                     ))}
                 </tbody>

@@ -23,6 +23,13 @@ function Delete({ setRefresh }) {
     return (
         <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
             <form onSubmit={handleDelete}>
+                
+                <div style={{ fontSize: '16px', fontWeight: "bold" }}>
+                    <p>
+                        Eliminar un producto
+                    </p>
+                </div>
+                
                 <div>
                     <input
                         type='numeric'
@@ -44,7 +51,7 @@ function Delete({ setRefresh }) {
                 </div>
 
                 <div>{messageDelete ? <p>{messageDelete}</p> : <br />}</div>
-                <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
+                <div style={{ display: 'flex', gap: '10px', justifyContent: "right", marginBottom: '10px' }}>
                     <button type='submit' style={{
                         borderRadius: "4px",
                         backgroundColor: "#FF4D4D",
@@ -52,16 +59,6 @@ function Delete({ setRefresh }) {
                         border: "none",
                         fontWeight: "bold"
                     }}>Eliminar</button>
-
-                    <Link to="/">
-                        <button style={{
-                            borderRadius: "4px",
-                            backgroundColor: "#00C851",
-                            padding: '15px 15px',
-                            border: "none",
-                            fontWeight: "bold"
-                        }} >Atrás</button>
-                    </Link>
                 </div>
             </form>
         </div>

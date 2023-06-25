@@ -10,7 +10,7 @@ function New({ setRefresh }) {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            postFetch('products', { product_name: product_name, product_year: product_price})
+            postFetch('products', { product_name: product_name, product_price: product_price})
                 .then(() => {
                     setProduct_name('');
                     setProuct_price('');
@@ -23,9 +23,15 @@ function New({ setRefresh }) {
     }
 
     return (
-        <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
+        <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '30px' }}>
             <form onSubmit={handleSubmit}>
 
+                <div style={{ fontSize: '16px', fontWeight: 'bold' }}>
+                    <p>
+                        Crear un nuevo producto
+                    </p>
+                </div>
+                
                 <div>
                     <input
                         type='text'
@@ -68,24 +74,15 @@ function New({ setRefresh }) {
 
                 <div>{message ? <p>{message}</p> : <br />}</div>
 
-                <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
+                <div style={{ display: 'flex', gap: '10px', justifyContent: "right", marginBottom: '10px' }}>
                     <button type='submit' style={{
                         borderRadius: "4px",
-                        backgroundColor: "#00C851",
+                        backgroundColor: "#6BFF33",
                         padding: '15px 15px',
                         border: "none",
                         fontWeight: "bold"
-                    }}>Aceptar</button>
+                    }}>Crear</button>
 
-                    <Link to="/">
-                        <button style={{
-                            borderRadius: "4px",
-                            backgroundColor: "#FF4D4D",
-                            padding: '15px 15px',
-                            border: "none",
-                            fontWeight: "bold"
-                        }} >Atrás</button>
-                    </Link>
                 </div>
 
             </form>

@@ -1,47 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
 import Index from '../components/products/index';
+import New from '../components/products/new';
+import Edit from '../components/products/edit';
+import Delete from '../components/products/delete';
 
 function Home() {
-    const [refresh, setRefresh] = useState(true);
-    return (
-        <div>
-            <Index refresh={refresh} setRefresh={setRefresh} />
-
-            <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
-                <Link to="/create">
-                    <button style={{
-                        borderRadius: "4px",
-                        backgroundColor: "#00C851",
-                        padding: '15px 15px',
-                        border: "none",
-                        fontWeight: "bold"
-                    }}>Crear</button>
-                </Link>
-
-                <Link to="/edit">
-                    <button style={{
-                        borderRadius: "4px",
-                        backgroundColor: "lightblue",
-                        padding: '15px 15px',
-                        border: "none",
-                        fontWeight: "bold"
-                    }}>Editar</button>
-                </Link>
-
-                <Link to="/delete">
-                    <button style={{
-                        borderRadius: "4px",
-                        backgroundColor: "#FF4D4D",
-                        padding: '15px 15px',
-                        border: "none",
-                        fontWeight: "bold"
-                    }}>Eliminar</button>
-                </Link>
-            </div>
-
-        </div>
-    );
+  const [refresh, setRefresh] = useState(true)
+  
+  return (
+    <div>
+      <Index refresh={refresh} setRefresh={setRefresh}/>
+      <New setRefresh={setRefresh}/>
+      <Edit setRefresh={setRefresh}/>
+      <Delete setRefresh={setRefresh}/>
+    </div>
+  )
 }
 
 export default Home;
