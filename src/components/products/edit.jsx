@@ -27,66 +27,67 @@ function Edit({ setRefresh }) {
     return (
         <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
             <form onSubmit={handleEdit}>
-                <div>
-                    <input
-                        type='numeric'
-                        value={idEdit}
-                        placeholder='ID del producto'
-                        onChange={(e) => { setIdEdit(e.target.value); }}
-                        style={{
-                            padding: '0.5em',
-                            fontSize: '16px',
-                            border: '1px solid lightgray',
-                            borderRadius: '4px',
-                            outline: 'none',
-                            boxShadow: 'none',
-                            width: '100%',
-                            boxSizing: 'border-box',
-                        }}
-                    />
-                </div>
+                <div style={{ backgroundColor: "#D4FCFF", padding: "15px" }}>
+                    <div>
+                        <input
+                            type='numeric'
+                            value={idEdit}
+                            placeholder='ID del producto'
+                            onChange={(e) => { setIdEdit(e.target.value); }}
+                            style={{
+                                padding: '0.5em',
+                                fontSize: '16px',
+                                border: '1px solid lightgray',
+                                borderRadius: '4px',
+                                outline: 'none',
+                                boxShadow: 'none',
+                                width: '100%',
+                                boxSizing: 'border-box',
+                            }}
+                        />
+                    </div>
 
-                <div>
-                    <input
-                        type='text'
-                        value={editProduct_name}
-                        placeholder='Nombre del producto'
-                        onChange={(e) => { setEditProduct_name(e.target.value); }}
-                        style={{
-                            padding: '0.5em',
-                            fontSize: '16px',
-                            border: '1px solid lightgray',
-                            borderRadius: '4px',
-                            outline: 'none',
-                            boxShadow: 'none',
-                            width: '100%',
-                            boxSizing: 'border-box',
-                            marginTop: '10px'
-                        }}
-                    />
-                </div>
+                    <div>
+                        <input
+                            type='text'
+                            value={editProduct_name}
+                            placeholder='Nombre del producto'
+                            onChange={(e) => { setEditProduct_name(e.target.value); }}
+                            style={{
+                                padding: '0.5em',
+                                fontSize: '16px',
+                                border: '1px solid lightgray',
+                                borderRadius: '4px',
+                                outline: 'none',
+                                boxShadow: 'none',
+                                width: '100%',
+                                boxSizing: 'border-box',
+                                marginTop: '10px'
+                            }}
+                        />
+                    </div>
 
-                <div>
-                    <input
-                        type='numeric'
-                        value={editProduct_price}
-                        placeholder='Precio del producto'
-                        onChange={(e) => { setEditProduct_price(e.target.value); }}
-                        style={{
-                            padding: '0.5em',
-                            fontSize: '16px',
-                            border: '1px solid lightgray',
-                            borderRadius: '4px',
-                            outline: 'none',
-                            boxShadow: 'none',
-                            width: '100%',
-                            boxSizing: 'border-box',
-                            marginTop: '10px'
-                        }}
-                    />
-                </div>
+                    <div>
+                        <input
+                            type='numeric'
+                            value={editProduct_price}
+                            placeholder='Precio del producto'
+                            onChange={(e) => { setEditProduct_price(e.target.value); }}
+                            style={{
+                                padding: '0.5em',
+                                fontSize: '16px',
+                                border: '1px solid lightgray',
+                                borderRadius: '4px',
+                                outline: 'none',
+                                boxShadow: 'none',
+                                width: '100%',
+                                boxSizing: 'border-box',
+                                marginTop: '10px'
+                            }}
+                        />
+                    </div>
 
-                <div>{messageEdit ? <p>{messageEdit}</p> : <br />}</div>
+                    <div>{messageEdit ? <p>{messageEdit}</p> : <br />}</div>
 
                 <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
                     <button type='submit' style={{
@@ -107,9 +108,13 @@ function Edit({ setRefresh }) {
                         }} >Cancelar</button>
                     </Link>
                 </div>
+                </div>
+
+
             </form>
         </div>
     )
 
 }
+
 export default Edit;

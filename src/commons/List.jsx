@@ -7,24 +7,27 @@ const List = ({ contents }) => {
     return (
 
         <div style={{ display: 'flex', gap: '10px', justifyContent: "center", marginTop: '10px' }}>
-            <table>
-                <tr>
-                    <th style={{ padding: "1em", backgroundColor: "lightgray" }}>Id</th>
-                    <th style={{ padding: "1em", backgroundColor: "lightgray" }}>Nombre del producto</th>
-                    <th style={{ padding: "1em", backgroundColor: "lightgray" }}>Precio del producto</th>
-                </tr>
+            <table style={{ borderCollapse: 'collapse' }}>
+                <thead>
+                    <tr>
+                        <th style={{ padding: "1em", backgroundColor: "#FF9800", color: "white" }}>Id</th>
+                        <th style={{ padding: "1em", backgroundColor: "#FF9800", color: "white" }}>Nombre del producto</th>
+                        <th style={{ padding: "1em", backgroundColor: "#FF9800", color: "white" }}>Precio del producto</th>
+                    </tr>
+                </thead>
 
                 <tbody>
-                    {contents.map(({ id, product_name, product_price }) => (
-                        <tr>
-                            <td style={{ padding: "1em", backgroundColor: "lightgray", textAlign: "center", fontWeight: "bold" }} >{id}</td>
-                            <td style={{ padding: "1em", backgroundColor: "#E8E8E8", textAlign: "center", fontWeight: "bold" }} >{product_name}</td>
-                            <td style={{ padding: "1em", backgroundColor: "#E8E8E8", textAlign: "center", fontWeight: "bold" }} >{product_price}</td>
+                    {contents.map(({ id, product_name, product_price }, index) => (
+                        <tr key={index} style={{ backgroundColor: index % 2 === 0 ? "#FFF8E1" : "#FFF3E0" }}>
+                            <td style={{ padding: "1em", textAlign: "center", fontWeight: "bold" }}>{id}</td>
+                            <td style={{ padding: "1em", textAlign: "center", fontWeight: "bold" }}>{product_name}</td>
+                            <td style={{ padding: "1em", textAlign: "center", fontWeight: "bold" }}>{product_price}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
+
     );
 
 }
